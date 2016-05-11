@@ -19,7 +19,7 @@ print "无线网卡信息: "
 #print objNicConfig.SettingID
 #print objNicConfig.Description.encode("cp936")
 print 'IP: ', ', '.join(objNicConfig.IPAddress)
-if objNicConfig.DefaultIPGateway!=None :
+if objNicConfig.DefaultIPGateway!=None and objNicConfig.DNSServerSearchOrder!=None:
     print '掩码: ', ', '.join(objNicConfig.IPSubnet)
     print '网关: ', ', '.join(objNicConfig.DefaultIPGateway)
     print 'DNS: ', ', '.join(objNicConfig.DNSServerSearchOrder)
