@@ -32,7 +32,7 @@ def change(ip_last):
     arrSubnetMasks = ['255.255.255.0']
     arrDefaultGateways = ['10.104.'+ip_3nd+'.1']
     arrGatewayCostMetrics = [1]
-    arrDNSServers = ['114.114.114.114', '8.8.8.8']
+    arrDNSServers = ['114.114.114.114', '208.67.222.222']
     intReboot = 0
     returnValue = objNicConfig.EnableStatic(IPAddress = arrIPAddresses, SubnetMask =arrSubnetMasks)
     if returnValue[0] == 0 or returnValue[0] == 1:
