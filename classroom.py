@@ -11,13 +11,13 @@ if len(colNicConfigs) < 1:
     print u'没有找到可用的网络适配器'
     exit()
 for i in xrange(len(colNicConfigs)):
+    objNicConfig = colNicConfigs[i]
+    print objNicConfig.Index
+    print objNicConfig.SettingID
+    print objNicConfig.Description.encode("cp936")
     if colNicConfigs[i].SettingID=='{B324793C-DD04-43BB-8DD0-B17BCBED9DC2}' :
-        objNicConfig = colNicConfigs[i]
         break
 print u"无线网卡信息: "
-#print objNicConfig.Index
-#print objNicConfig.SettingID
-#print objNicConfig.Description.encode("cp936")
 print u'IP: ', ', '.join(objNicConfig.IPAddress)
 if objNicConfig.DefaultIPGateway!=None and objNicConfig.DNSServerSearchOrder!=None:
     print u'掩码: ', ', '.join(objNicConfig.IPSubnet)

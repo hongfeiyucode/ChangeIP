@@ -13,8 +13,11 @@ if len(colNicConfigs) < 1:
     print u'没有找到可用的网络适配器'
     exit()
 for i in xrange(len(colNicConfigs)):
+    objNicConfig = colNicConfigs[i]
+    print objNicConfig.Index
+    print objNicConfig.SettingID
+    print objNicConfig.Description.encode("cp936")
     if colNicConfigs[i].SettingID=='{5240CB7A-FA58-4A5A-8C1A-8C8300AAE22B}' :
-        objNicConfig = colNicConfigs[i]
         break
 print u"以太网卡信息: "
 #print objNicConfig.Index
