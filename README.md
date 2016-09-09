@@ -20,6 +20,31 @@
 
 这样的话就不用输入了
 
+classroom.py里面29行写的是 
+
+`arrIPAddresses = ['10.104.111.'+str(ip_last)]`
+
+直接改成你所在的网段即可，因为教室的网段是固定的
+
+dormitory.py里面
+
+```
+if isjiaban=='y' or isjiaban=='Y' :
+    ip_3nd='161'
+else :
+    ip_3nd='160'
+```
+
+因为我们宿舍两个不同的地方是两个不同的网段
+
+所以这里有个判断，然后IP的前两段是固定好的
+
+`arrIPAddresses = ['10.104.'+ip_3nd+'.'+str(ip_last)]`
+
+把IP改成你在的网段就行啦
+
+
+
 - [x] pyinstaller
 - [ ] 生成可执行文件
 - [x] 中文乱码
